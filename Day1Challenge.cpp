@@ -6,7 +6,7 @@ using namespace std;
 
 string replaceSpelledNumbers(string input) { // Replaces any given numbers in text into digits
     string numbers[] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-    string replaceValues[] {"on1e", "tw2o", "thr3ee", "fo4ur", "fi5ve", "si6x", "sev7en", "eig8ht", "ni9ne"};
+    string replaceValues[] {"on1e", "tw2o", "thr3ee", "fo4ur", "fi5ve", "si6x", "sev7en", "eig8ht", "ni9ne"}; // Alas I cannot take credit for this ingenious solution to edge cases, thank you random reddit user
 
     string returnString = input;
     int counter = 0;
