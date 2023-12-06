@@ -58,7 +58,6 @@ def objectiveTwo() -> int:
             cards.append(1) # Initializes cards as having one of each card
         indexCounter = 0 # This is the card number
         for card in cards: # For each card number
-            print(f"Going through card {indexCounter}. Should be adding {matchingValues(lines[indexCounter])} cards")
             for i in range(card): # For each card of this number
                 for j in range(matchingValues(lines[indexCounter])): # For the value of the card, i.e. if card 1 is 4 the next 4 cards each get +1 copy
                     if indexCounter + j + 1 < len(lines):
