@@ -3,7 +3,7 @@ def cardValue(char):
     return 13 - order.index(char)
 
 class Hand(): # Represents a hand of cards
-    def __init__(self, value: str, bid: int):
+    def __init__(self, value: str, bid: int) -> None:
         # For part 2, comparisons are not changed but the way rank is figured out does
         self.value = value
         self.bid = bid
@@ -66,7 +66,7 @@ class Hand(): # Represents a hand of cards
                 pass
         if self.value == "JJ2JJ":
             print(f"Self.rankedAs is {self.rankedAs}")
-    def __lt__(self, other):
+    def __lt__(self, other) -> bool:
         '''
         >>> Hand("J6233", 1) < Hand("66223", 1)
         False
@@ -90,9 +90,9 @@ class Hand(): # Represents a hand of cards
                     return False
                 counter += 1
             return False # Because they are equal
-    def __le__(self, other):
+    def __le__(self, other) -> bool:
         return self < other or self == other
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         if self.rankedAs < other.rankedAs:
             return False
         elif self.rankedAs > other.rankedAs:
